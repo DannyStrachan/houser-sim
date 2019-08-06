@@ -26,7 +26,7 @@ export default class Dashboard extends Component {
 
   deleteListing = id => {
       Axios.delete(`/api/deleteListing/${id}`)
-      .then(this.getListings())
+      .then((res) => {this.getListings()})
   }
 
   render() {
